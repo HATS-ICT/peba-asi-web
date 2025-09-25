@@ -213,7 +213,12 @@
       <i class="fas fa-chevron-down dropdown-arrow"></i>
     </button>
     <div class="more-works-dropdown" id="moreWorksDropdown">
-
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
       <div class="works-list">
         <!-- TODO: Replace with your lab's related works -->
         <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
@@ -257,18 +262,18 @@
             <h1 class="title is-1 publication-title">Implicit Behavioral Alignment of Language Agents in High-Stakes Crowd Simulations</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://yunzhewang.github.io" target="_blank">Yunzhe Wang</a><sup>1,2</sup>,</span>
+                <a href="https://yunzhewang.github.io" target="_blank">Yunzhe Wang</a>,</span>
                 <span class="author-block">
-                  <a href="https://ict.usc.edu/about-ict/leadership/research-leadership/gale-lucas/" target="_blank">Gale M. Lucas</a><sup>1,2</sup>,</span>
+                  <a href="https://ict.usc.edu/about-ict/leadership/research-leadership/gale-lucas/" target="_blank">Gale M. Lucas</a>,</span>
                   <span class="author-block">
-                    <a href="https://sonny.usc.edu" target="_blank">Burcin Becerik-Gerber</a><sup>1</sup>,</span>
+                    <a href="https://sonny.usc.edu" target="_blank">Burcin Becerik-Gerber</a>,</span>
                   <span class="author-block">
-                    <a href="https://ict.usc.edu" target="_blank">Volkan Ustun</a><sup>2</sup>
+                    <a href="https://ict.usc.edu" target="_blank">Volkan Ustun</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>University of Southern California<br><sup>2</sup>USC Institute for Creative Technologies<br>EMNLP 2025</span>
+                    <span class="author-block">University of Southern California & USC Institute for Creative Technologies<br>EMNLP 2025</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -311,22 +316,18 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Framework overview-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
+      <img src="static/images/framework.png" alt="PEBA Framework Overview - Persona-Environment Behavioral Alignment workflow" loading="lazy" style="width: 100%; height: auto;"/>
       <h2 class="subtitle has-text-centered">
         PEBA-PEvo framework demonstrates how persona optimization can align language agent behaviors with expert distributions in high-stakes crowd simulations, closing the Behavior-Realism Gap through iterative persona refinement.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End framework overview -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -345,123 +346,205 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Key Findings -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Key Findings</h2>
+        <div class="content">
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="box">
+                <h4 class="title is-5">🎯 Behavior-Realism Gap</h4>
+                <p class="has-text-justified">
+                  We identify a critical phenomenon where generative agent behaviors systematically deviate from expert expectations and real-world data in high-stakes scenarios, particularly in active shooter incident simulations.
+                </p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h4 class="title is-5">🧠 PEBA Framework</h4>
+                <p class="has-text-justified">
+                  Our theoretical framework formulates behavioral alignment as a distribution matching problem grounded in Lewin's behavior equation: B = f(P, E), where behavior is a function of persona and environment.
+                </p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h4 class="title is-5">⚡ PersonaEvolve Algorithm</h4>
+                <p class="has-text-justified">
+                  PEvo iteratively refines agent personas through LLM-based optimization, implicitly aligning collective behaviors with realistic expert benchmarks without explicit action prescription.
+                </p>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box">
+                <h4 class="title is-5">🔄 Generalization</h4>
+                <p class="has-text-justified">
+                  PEvo-refined personas successfully generalize to novel, related simulation scenarios, demonstrating robust behavioral alignment across different environmental contexts.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End key findings -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+<!-- PEBA Framework -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">PEBA Framework</h2>
+        <div class="content">
+          <div class="columns">
+            <div class="column is-half">
+              <img src="static/images/carousel1.jpg" alt="PEBA Framework Overview" loading="lazy"/>
+              <p class="has-text-centered"><em>Figure 1: PEBA-PEvo workflow showing persona optimization cycle</em></p>
+            </div>
+            <div class="column is-half has-text-justified">
+              <h4 class="title is-5">Persona-Environment Behavioral Alignment</h4>
+              <p>
+                PEBA extends Lewin's interactionist thesis by introducing a probabilistic interpretation where behavior is treated as a random variable jointly influenced by persona and environment context.
+              </p>
+              <p>
+                <strong>Key Components:</strong>
+              </p>
+              <ul>
+                <li><strong>Persona Space (P):</strong> Agent characteristics and traits</li>
+                <li><strong>Environment Context (E):</strong> Situational factors and constraints</li>
+                <li><strong>Behavior Space (B):</strong> Observable actions and decisions</li>
+                <li><strong>Distribution Matching:</strong> Aligning simulated with expert distributions</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End PEBA framework -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<!-- Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div class="content">
+          <div class="columns">
+            <div class="column is-half">
+              <h4 class="title is-5">Quantitative Performance</h4>
+              <div class="box">
+                <div class="level">
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Distributional Divergence Reduction</p>
+                      <p class="title is-2 has-text-success">84%</p>
+                      <p class="subtitle is-6">vs. No Steering</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Improvement over Baselines</p>
+                      <p class="title is-2 has-text-info">34%</p>
+                      <p class="subtitle is-6">vs. Explicit Instructions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="has-text-justified">
+                Our evaluation in active shooter incident simulations demonstrates significant improvements in behavioral realism. PEvo achieved an 84% average reduction in KL divergence compared to unsteered agents and outperformed explicit instruction baselines by 34%.
+              </p>
+            </div>
+            <div class="column is-half">
+              <img src="static/images/carousel2.jpg" alt="Performance comparison results" loading="lazy"/>
+              <p class="has-text-centered"><em>Figure 2: Performance comparison across different steering methods</em></p>
+            </div>
+          </div>
+          
+          <div class="columns">
+            <div class="column is-half">
+              <img src="static/images/carousel3.jpg" alt="Behavior distribution alignment" loading="lazy"/>
+              <p class="has-text-centered"><em>Figure 3: Behavior distribution alignment before and after PEvo optimization</em></p>
+            </div>
+            <div class="column is-half">
+              <h4 class="title is-5">Behavioral Alignment</h4>
+              <p class="has-text-justified">
+                The figure shows the dramatic improvement in aligning simulated agent behaviors with expert-elicited distributions. Before optimization, agents showed significant deviations from expected behaviors in high-stakes scenarios.
+              </p>
+              <p class="has-text-justified">
+                <strong>Key Behavioral Categories:</strong>
+              </p>
+              <ul>
+                <li><strong>Hide:</strong> Seeking shelter and concealment</li>
+                <li><strong>Run:</strong> Evacuating from the scene</li>
+                <li><strong>Fight:</strong> Confronting the threat</li>
+              </ul>
+              <p class="has-text-justified">
+                Post-optimization, the simulated distribution closely matches expert expectations, with proper balance between fight, flight, and freeze responses.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+<!-- End results -->
+
+<!-- Methodology -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">Methodology</h2>
+        <div class="content">
+          <div class="columns">
+            <div class="column is-half has-text-justified">
+              <h4 class="title is-5">PersonaEvolve Algorithm</h4>
+              <p>
+                PEvo operates through an iterative optimization cycle:
+              </p>
+              <ol>
+                <li><strong>Simulation:</strong> Generate agent trajectories using current personas</li>
+                <li><strong>Classification:</strong> Map trajectories to high-level behavior classes</li>
+                <li><strong>Divergence Measurement:</strong> Compare simulated vs. expert distributions</li>
+                <li><strong>Persona Selection:</strong> Identify agents contributing most to the gap</li>
+                <li><strong>Optimization:</strong> Refine selected personas using LLM guidance</li>
+              </ol>
+              <p>
+                This process continues until the Behavior-Realism Gap is minimized, ensuring authentic collective behavior emergence.
+              </p>
+            </div>
+            <div class="column is-half">
+              <img src="static/images/carousel4.jpg" alt="PersonaEvolve algorithm workflow" loading="lazy"/>
+              <p class="has-text-centered"><em>Figure 4: PersonaEvolve optimization algorithm workflow</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End methodology -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
