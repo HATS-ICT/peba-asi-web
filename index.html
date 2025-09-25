@@ -315,8 +315,8 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/framework.png" alt="PEBA Framework Overview - Persona-Environment Behavioral Alignment workflow" loading="lazy" style="width: 100%; height: auto;"/>
-      <h2 class="subtitle has-text-centered">
-        PEBA-PEvo framework demonstrates how persona optimization can align language agent behaviors with expert distributions in high-stakes crowd simulations, closing the Behavior-Realism Gap through iterative persona refinement.
+      <h2 class="subtitle has-text-left">
+        PEBA-PEvo workflow: Language agents with initial personas populate a school environment. Each agent autonomously observes, updates memories, and uses LLM reasoning to generate trajectories. An LLM classifier maps trajectories to behavior classes, creating a simulated crowd distribution compared against expert benchmarks. The resulting Behavior-Realism Gap guides persona updates for contributing agents, iteratively closing the gap.
       </h2>
     </div>
   </div>
@@ -340,147 +340,22 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Key Findings -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Key Findings</h2>
-        <div class="content">
-          <div class="columns is-multiline">
-            <div class="column is-half">
-              <div class="box">
-                <h4 class="title is-5">🎯 Behavior-Realism Gap</h4>
-                <p class="has-text-justified">
-                  We identify a critical phenomenon where generative agent behaviors systematically deviate from expert expectations and real-world data in high-stakes scenarios, particularly in active shooter incident simulations.
-                </p>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="box">
-                <h4 class="title is-5">🧠 PEBA Framework</h4>
-                <p class="has-text-justified">
-                  Our theoretical framework formulates behavioral alignment as a distribution matching problem grounded in Lewin's behavior equation: B = f(P, E), where behavior is a function of persona and environment.
-                </p>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="box">
-                <h4 class="title is-5">⚡ PersonaEvolve Algorithm</h4>
-                <p class="has-text-justified">
-                  PEvo iteratively refines agent personas through LLM-based optimization, implicitly aligning collective behaviors with realistic expert benchmarks without explicit action prescription.
-                </p>
-              </div>
-            </div>
-            <div class="column is-half">
-              <div class="box">
-                <h4 class="title is-5">🔄 Generalization</h4>
-                <p class="has-text-justified">
-                  PEvo-refined personas successfully generalize to novel, related simulation scenarios, demonstrating robust behavioral alignment across different environmental contexts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End key findings -->
-
-<!-- PEBA Framework -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <h2 class="title is-3 has-text-centered">PEBA Framework</h2>
-        <div class="content">
-          <div class="columns">
-            <div class="column is-half">
-              <img src="static/images/carousel1.jpg" alt="PEBA Framework Overview" loading="lazy"/>
-              <p class="has-text-centered"><em>Figure 1: PEBA-PEvo workflow showing persona optimization cycle</em></p>
-            </div>
-            <div class="column is-half has-text-justified">
-              <h4 class="title is-5">Persona-Environment Behavioral Alignment</h4>
-              <p>
-                PEBA extends Lewin's interactionist thesis by introducing a probabilistic interpretation where behavior is treated as a random variable jointly influenced by persona and environment context.
-              </p>
-              <p>
-                <strong>Key Components:</strong>
-              </p>
-              <ul>
-                <li><strong>Persona Space (P):</strong> Agent characteristics and traits</li>
-                <li><strong>Environment Context (E):</strong> Situational factors and constraints</li>
-                <li><strong>Behavior Space (B):</strong> Observable actions and decisions</li>
-                <li><strong>Distribution Matching:</strong> Aligning simulated with expert distributions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End PEBA framework -->
-
-<!-- Results -->
+<!-- Implicit vs Explicit Enforcing -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
-        <h2 class="title is-3 has-text-centered">Results</h2>
+        <h2 class="title is-4 has-text-left">Implicit Enforcing Achieves Superior Contextual Realism</h2>
         <div class="content">
           <div class="columns">
-            <div class="column is-half">
-              <h4 class="title is-5">Quantitative Performance</h4>
-              <div class="box">
-                <div class="level">
-                  <div class="level-item has-text-centered">
-                    <div>
-                      <p class="heading">Distributional Divergence Reduction</p>
-                      <p class="title is-2 has-text-success">84%</p>
-                      <p class="subtitle is-6">vs. No Steering</p>
-                    </div>
-                  </div>
-                  <div class="level-item has-text-centered">
-                    <div>
-                      <p class="heading">Improvement over Baselines</p>
-                      <p class="title is-2 has-text-info">34%</p>
-                      <p class="subtitle is-6">vs. Explicit Instructions</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="has-text-justified">
-                Our evaluation in active shooter incident simulations demonstrates significant improvements in behavioral realism. PEvo achieved an 84% average reduction in KL divergence compared to unsteered agents and outperformed explicit instruction baselines by 34%.
-              </p>
-            </div>
-            <div class="column is-half">
-              <img src="static/images/carousel2.jpg" alt="Performance comparison results" loading="lazy"/>
-              <p class="has-text-centered"><em>Figure 2: Performance comparison across different steering methods</em></p>
+            <div class="column is-full">
+              <img src="static/images/table1.png" alt="Performance comparison between implicit and explicit enforcing" loading="lazy"/>
             </div>
           </div>
-          
           <div class="columns">
-            <div class="column is-half">
-              <img src="static/images/carousel3.jpg" alt="Behavior distribution alignment" loading="lazy"/>
-              <p class="has-text-centered"><em>Figure 3: Behavior distribution alignment before and after PEvo optimization</em></p>
-            </div>
-            <div class="column is-half">
-              <h4 class="title is-5">Behavioral Alignment</h4>
-              <p class="has-text-justified">
-                The figure shows the dramatic improvement in aligning simulated agent behaviors with expert-elicited distributions. Before optimization, agents showed significant deviations from expected behaviors in high-stakes scenarios.
-              </p>
-              <p class="has-text-justified">
-                <strong>Key Behavioral Categories:</strong>
-              </p>
-              <ul>
-                <li><strong>Hide:</strong> Seeking shelter and concealment</li>
-                <li><strong>Run:</strong> Evacuating from the scene</li>
-                <li><strong>Fight:</strong> Confronting the threat</li>
-              </ul>
-              <p class="has-text-justified">
-                Post-optimization, the simulated distribution closely matches expert expectations, with proper balance between fight, flight, and freeze responses.
+            <div class="column is-full has-text-justified">
+              <p>
+                Across four LLM models tested, PEVO delivers the most faithful crowd-level behavior distributions compared to baseline and explicit instruction approaches. Averaging over all alignment metrics (KL divergence, JS divergence, total variation, and entropy difference), the behavioral gap drops from 0.47 with no steering to 0.19 with explicit enforcing and further to 0.16 with PEVO. This represents an 83.8% reduction relative to unsteered baselines and a 34.3% improvement over explicit instruction directives. The most dramatic improvement occurs in KL divergence, where PEVO reduces the average from 4.61 to 0.20—a 95.6% enhancement. Gemini 2.5 Flash and DeepSeek-V3 consistently achieve the lowest residual divergence, while all models except GPT-4o-mini demonstrate rapid convergence within 5-7 iterations across multiple distributional metrics.
               </p>
             </div>
           </div>
@@ -489,35 +364,25 @@
     </div>
   </div>
 </section>
-<!-- End results -->
+<!-- End implicit vs explicit -->
 
-<!-- Methodology -->
+<!-- Transferability -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
-        <h2 class="title is-3 has-text-centered">Methodology</h2>
+        <h2 class="title is-4 has-text-left">Learned Persona Pools are Cross-Environment Transferable</h2>
         <div class="content">
           <div class="columns">
             <div class="column is-half has-text-justified">
-              <h4 class="title is-5">PersonaEvolve Algorithm</h4>
               <p>
-                PEvo operates through an iterative optimization cycle:
-              </p>
-              <ol>
-                <li><strong>Simulation:</strong> Generate agent trajectories using current personas</li>
-                <li><strong>Classification:</strong> Map trajectories to high-level behavior classes</li>
-                <li><strong>Divergence Measurement:</strong> Compare simulated vs. expert distributions</li>
-                <li><strong>Persona Selection:</strong> Identify agents contributing most to the gap</li>
-                <li><strong>Optimization:</strong> Refine selected personas using LLM guidance</li>
-              </ol>
-              <p>
-                This process continues until the Behavior-Realism Gap is minimized, ensuring authentic collective behavior emergence.
+                To evaluate generalizability, we deployed personas optimized in school-based ASI simulations directly into a novel office building environment with different spatial configurations and open-space layouts. Transferred personas substantially outperformed unoptimized baselines across all metrics, delivering a 97.5% reduction in KL divergence (from 7.822 to 0.199). While fully retrained personas achieved even tighter alignment (KL = 0.085), transferred personas retained 57.3% of that optimization gain, demonstrating robust cross-environment transfer. These findings suggest that PEVO isolates and refines core behavioral traits that remain effective across similar crisis scenarios, despite significant differences in spatial layout and environmental context.
               </p>
             </div>
-            <div class="column is-half">
-              <img src="static/images/carousel4.jpg" alt="PersonaEvolve algorithm workflow" loading="lazy"/>
-              <p class="has-text-centered"><em>Figure 4: PersonaEvolve optimization algorithm workflow</em></p>
+            <div class="columns is-vcentered">  
+              <div class="column">
+                <img src="static/images/table2.png" alt="Cross-environment transfer performance" loading="lazy"/>
+              </div>
             </div>
           </div>
         </div>
@@ -525,8 +390,36 @@
     </div>
   </div>
 </section>
-<!-- End methodology -->
+<!-- End transferability -->
 
+<!-- Cost Efficiency -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-4 has-text-left">PEVO is Cost-Effective and Model-Dependent in Efficiency</h2>
+        <div class="content">
+          <div class="columns is-vcentered">
+            <div class="column is-half">
+              <img src="static/images/convergence.png" alt="Convergence analysis showing rapid alignment across iterations" loading="lazy"/>
+            </div>
+            <div class="column is-half">
+              <img src="static/images/cost_analysis.png" alt="Cost efficiency analysis across LLM models" loading="lazy"/>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-full has-text-justified">
+              <p>
+                Cost analysis reveals that prompt tokens dominate usage (over 95% of total), making model pricing the primary driver of expense. Per iteration, GPT-4.1 Mini is most expensive (~$0.60), while DeepSeek-V3 is most economical (~$0.20), with GPT-4o Mini and Gemini 2.5 Flash falling between. When normalized by KL improvement per dollar, DeepSeek-V3 and Gemini 2.5 Flash provide roughly three times the efficiency of both GPT variants. Even the most expensive model requires under $10 for complete 15-iteration optimization, while a shortened 7-iteration run (achieving 90% of attainable alignment) halves this cost. This demonstrates that behavioral alignment with PEVO is not only more accurate but also economically practical for medium-scale crowd simulations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End cost efficiency -->
 
 
 <!-- Authors -->
