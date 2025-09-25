@@ -732,6 +732,72 @@ a:focus {
 }
 
 
+/* Key Takeaways Styling */
+.takeaway-item {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: var(--background-primary);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.takeaway-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.takeaway-item .title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: var(--text-primary);
+}
+
+.takeaway-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.takeaway-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Mobile responsive for takeaways */
+@media screen and (max-width: 768px) {
+  .takeaway-item {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .takeaway-item .title {
+    font-size: 1.1rem !important;
+    gap: 0.5rem;
+  }
+  
+  .takeaway-number {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Print styles */
 @media print {
   .more-works-container {
@@ -746,6 +812,11 @@ a:focus {
     background: transparent !important;
     color: var(--text-primary) !important;
     box-shadow: none !important;
+  }
+  
+  .takeaway-item {
+    box-shadow: none;
+    border: 1px solid var(--border-color);
   }
 }
 
