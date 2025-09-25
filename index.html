@@ -314,7 +314,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/framework.png" alt="PEBA Framework Overview - Persona-Environment Behavioral Alignment workflow" loading="lazy" style="width: 100%; height: auto;"/>
+      <img src="static/images/framework.webp" alt="PEBA Framework Overview - Persona-Environment Behavioral Alignment workflow" loading="lazy" style="width: 100%; height: auto;"/>
       <h2 class="subtitle has-text-left">
         PEBA-PEvo workflow: Language agents with initial personas populate a school environment. Each agent autonomously observes, updates memories, and uses LLM reasoning to generate trajectories. An LLM classifier maps trajectories to behavior classes, creating a simulated crowd distribution compared against expert benchmarks. The resulting Behavior-Realism Gap guides persona updates for contributing agents, iteratively closing the gap.
       </h2>
@@ -349,13 +349,13 @@
         <div class="content">
           <div class="columns">
             <div class="column is-full">
-              <img src="static/images/table1.png" alt="Performance comparison between implicit and explicit enforcing" loading="lazy"/>
+              <img src="static/images/table1.webp" alt="Performance comparison between implicit and explicit enforcing" loading="lazy"/>
             </div>
           </div>
           <div class="columns">
             <div class="column is-full has-text-justified">
               <p>
-                Across four LLM models tested, PEVO delivers the most faithful crowd-level behavior distributions compared to baseline and explicit instruction approaches. Averaging over all alignment metrics (KL divergence, JS divergence, total variation, and entropy difference), the behavioral gap drops from 0.47 with no steering to 0.19 with explicit enforcing and further to 0.16 with PEVO. This represents an 83.8% reduction relative to unsteered baselines and a 34.3% improvement over explicit instruction directives. The most dramatic improvement occurs in KL divergence, where PEVO reduces the average from 4.61 to 0.20—a 95.6% enhancement. Gemini 2.5 Flash and DeepSeek-V3 consistently achieve the lowest residual divergence, while all models except GPT-4o-mini demonstrate rapid convergence within 5-7 iterations across multiple distributional metrics.
+                We evaluate three behavior enforcing approaches: (1) <strong>No Enforcing</strong>, where agents act solely according to initial personas, exposing the raw behavior-realism gap; (2) <strong>Explicit Enforcing</strong>, which directly instructs agents to perform specific behaviors (e.g., "always choose Hide"), but harms contextual realism as agents follow orders regardless of environmental context; and (3) <strong>Implicit Enforcing (PEVO)</strong>, which iteratively refines agent personas (e.g., updating a security guard to "former combat medic with high assertiveness") to naturally elicit target behaviors through emergent reasoning. Across four LLM models, PEVO achieves superior behavioral alignment, reducing the average distributional gap from 0.47 (no steering) to 0.16—an 84% improvement over baselines and 34% over explicit methods. The implicit approach preserves contextual realism by allowing agents to reason naturally about their environment while achieving the desired collective behavior distribution.
               </p>
             </div>
           </div>
@@ -376,12 +376,12 @@
           <div class="columns">
             <div class="column is-half has-text-justified">
               <p>
-                To evaluate generalizability, we deployed personas optimized in school-based ASI simulations directly into a novel office building environment with different spatial configurations and open-space layouts. Transferred personas substantially outperformed unoptimized baselines across all metrics, delivering a 97.5% reduction in KL divergence (from 7.822 to 0.199). While fully retrained personas achieved even tighter alignment (KL = 0.085), transferred personas retained 57.3% of that optimization gain, demonstrating robust cross-environment transfer. These findings suggest that PEVO isolates and refines core behavioral traits that remain effective across similar crisis scenarios, despite significant differences in spatial layout and environmental context.
+                We tested personas optimized in school environments by transferring them to a novel office building scenario. Transferred personas achieved a 97.5% reduction in KL divergence compared to unoptimized baselines. While fully retrained personas performed slightly better, transferred personas retained 57% of the optimization benefit, demonstrating effective cross-environment generalization.
               </p>
             </div>
             <div class="columns is-vcentered">  
               <div class="column">
-                <img src="static/images/table2.png" alt="Cross-environment transfer performance" loading="lazy"/>
+                <img src="static/images/table2.webp" alt="Cross-environment transfer performance" loading="lazy"/>
               </div>
             </div>
           </div>
@@ -401,10 +401,10 @@
         <div class="content">
           <div class="columns is-vcentered">
             <div class="column is-half">
-              <img src="static/images/convergence.png" alt="Convergence analysis showing rapid alignment across iterations" loading="lazy"/>
+              <img src="static/images/convergence.webp" alt="Convergence analysis showing rapid alignment across iterations" loading="lazy"/>
             </div>
             <div class="column is-half">
-              <img src="static/images/cost_analysis.png" alt="Cost efficiency analysis across LLM models" loading="lazy"/>
+              <img src="static/images/cost_analysis.webp" alt="Cost efficiency analysis across LLM models" loading="lazy"/>
             </div>
           </div>
           <div class="columns">
@@ -434,7 +434,7 @@
               <div class="has-text-centered" style="padding: 2rem 1rem; background-color: rgba(245, 245, 245, 0.5);">
                 <a href="https://www.linkedin.com/in/yunzhe-wang/" target="_blank">
                   <figure class="image is-128x128" style="margin: 0 auto 1rem auto;">
-                    <img class="is-rounded" src="static/images/yunzhe.jpg" alt="Yunzhe Wang" loading="lazy" style="width: 128px; height: 128px; object-fit: cover;"/>
+                    <img class="is-rounded" src="static/images/yunzhe.webp" alt="Yunzhe Wang" loading="lazy" style="width: 128px; height: 128px; object-fit: cover;"/>
                   </figure>
                 </a>
                 <div class="author-info">
@@ -449,7 +449,7 @@
               <div class="has-text-centered" style="padding: 2rem 1rem; background-color: rgba(245, 245, 245, 0.5);;">
                 <a href="https://www.linkedin.com/in/gale-m-lucas-phd/" target="_blank">
                   <figure class="image is-128x128" style="margin: 0 auto 1rem auto;">
-                    <img class="is-rounded" src="static/images/gale.jpg" alt="Gale M. Lucas" loading="lazy" style="width: 128px; height: 128px; object-fit: cover;"/>
+                    <img class="is-rounded" src="static/images/gale.webp" alt="Gale M. Lucas" loading="lazy" style="width: 128px; height: 128px; object-fit: cover;"/>
                   </figure>
                 </a>
                 <div class="author-info">
@@ -464,7 +464,7 @@
               <div class="has-text-centered" style="padding: 2rem 1rem; background-color: rgba(245, 245, 245, 0.5);">
                 <a href="https://www.linkedin.com/in/burcin-becerik-gerber-5001345/" target="_blank">
                   <figure class="image is-128x128" style="margin: 0 auto 1rem auto;">
-                    <img class="is-rounded" src="static/images/burcin.jpg" alt="Burcin Becerik-Gerber" loading="lazy" style="width: 128px; height: 128px; object-fit: cover;"/>
+                    <img class="is-rounded" src="static/images/burcin.webp" alt="Burcin Becerik-Gerber" loading="lazy" style="width: 128px; height: 128px; object-fit: cover;"/>
                   </figure>
                 </a>
                 <div class="author-info">
